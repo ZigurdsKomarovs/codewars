@@ -11,12 +11,11 @@
 // Input validation
 // If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
 
-
 // My solution
 
 function sumArray(arr) {
-    if (!arr || arr.length <= 1) return 0;
-    
-    const sortedArr = arr.slice().sort((a, b) => a - b);
-    return sortedArr.slice(1, -1).reduce((sum, num) => sum + num, 0);
-  }
+  if (!arr || arr.length <= 1) return 0;
+
+  const sortedArr = arr.slice().sort((a, b) => a - b);
+  return sortedArr.slice(1, -1).reduce((sum, num) => sum + num, 0);
+}
